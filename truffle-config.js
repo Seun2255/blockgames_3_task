@@ -1,6 +1,12 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 
 module.exports = {
+  plugins: [
+    'truffle-plugin-verify'
+  ],
+  api_keys: {
+    etherscan: `H2P2JGK1MA3XH595NU4M2X5TUY53IY75UF`
+  },
   networks: {
     development: {
       host: "127.0.0.1", // Localhost (default: none)
@@ -9,7 +15,7 @@ module.exports = {
     },
 
     rinkeby: {
-    provider: () => new HDWalletProvider(`immense priority first estate very car original indicate sell usual fame item`, `https://rinkeby.infura.io/v3/fe24fcfaa65f4d26bfd436ca00cc73cf`),
+    provider: () => new HDWalletProvider(`immense priority first estate very car original indicate sell usual fame item`, `wss://rinkeby.infura.io/ws/v3/fe24fcfaa65f4d26bfd436ca00cc73cf`),
     network_id: 4,       // Ropsten's id
     gas: 5500000,        // Ropsten has a lower block limit than mainnet
     confirmations: 2,    // # of confs to wait between deployments. (default: 0)
