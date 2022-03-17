@@ -1,5 +1,5 @@
-const PrimalCoin = artifacts.require("PrimalCoin");
-const PrimalNFT = artifacts.require("PrimalNFT");
+var PrimalCoin = artifacts.require("PrimalCoin");
+var PrimalNFT = artifacts.require("PrimalNFT");
 
 module.exports = function(deployer) {
     deployer.deploy(PrimalCoin);
